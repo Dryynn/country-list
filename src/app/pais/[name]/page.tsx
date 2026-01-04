@@ -79,7 +79,7 @@ export default async function CountryPage({
                     <p className="font bold text-xl text-gray mt-2 ">
                         <strong>Idiomas: </strong>
                         <br />
-                        {Object.values(country.languages).map((language) => (
+                        {Object.values(country.languages ?? {}).map((language) => (
                             <span key={language} className="inline-block px-2 mr-1 rounded-full text-white text-sm bg-indigo-700">{language}</span>
                         ))}
                     </p>
